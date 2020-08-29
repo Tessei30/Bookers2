@@ -1,0 +1,53 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-text {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.register {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn.btn-success {
+    width: 280px;
+    margin-top: 10px;
+}
+
+.nav.navbar-nav {
+    width: 500px;
+}
+
+.nav li {
+    color: white;
+    opacity: 0.8;
+}
+
+.nav li:hover {
+    opacity: 1;
+}
+
+
+.top-about {
+    width: 200px;
+}
+
+.nav>li>a {
+    padding: 0;
+}
+
+.footer-text {
+    width: 300px;
+    float: right;
+    text-align: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

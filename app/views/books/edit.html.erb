@@ -1,0 +1,24 @@
+
+
+
+  <div class="post-edit-title">
+
+<h1>Editing Book</h1>
+<%= render 'layouts/error', book: @book %>
+<%= form_for(@book) do |f| %>
+  <p>Title</p>
+  <%= f.text_field :title , class: "edit-title"%>
+  <p>Body</p>
+  <%= f.text_area :body , class: "edit-body"%>
+  <br>
+  <br>
+  <%= f.submit "Update Book" %>
+<% end %>
+
+<p>
+  <%= link_to "Show", book_path %>
+  |
+  <%= link_to "Back", books_path %>
+</p>
+</div>
+
