@@ -66,6 +66,22 @@
 					<td><span><%= attachment_image_tag book.user, :profile_image, :fill, 50, 50, fallback: "sample_img.gif", size:'50x50' %></span></td>
 					<td><span><%= link_to book.title, "/books/#{book.id}"%></span></td>
 					<td><span><%= book.body %></span></td>
+					<% if book.favorited_by?(current_user) %>
+				<td>
+                    <%= link_to book_favorites_path(book), method: :delete do %>
+                    <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+                    <%= book.favorites.count %> 
+                    <% end %>
+                </td>
+                <% else %>
+                <td>
+                    <%= link_to book_favorites_path(book), method: :post do %>
+                    <i class="far fa-heart" aria-hidden="true" ></i>
+                    <%= book.favorites.count %> 
+                    <% end %>
+                </td>
+                <% end %>
+					<td>コメント数：<%= book.book_comments.count %></td>
 				</tr>
 			<% end %>
 

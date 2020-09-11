@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   root :to => 'homes#top'
 
 	resources :users, only: [:index, :show, :edit, :update]
-	resources :books
+  resources :books do
+    resource :favorites, only: [:create, :destroy]
+    resource :book_comments, only:[:create, :destroy]
+  end
 	resources :book_images, only:[:new, :create, :index, :show]
   
 end
